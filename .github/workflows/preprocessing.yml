@@ -1,0 +1,45 @@
+name: ML Preprocessing Pipeline
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'data.csv'
+      - 'preprocessing/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'data.csv'
+      - 'preprocessing/**'
+  workflow_dispatch:
+
+jobs:
+  preprocess:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4  # pakai versi terbaru
+
+      - name: Set up Python
+        uses: actions/setup-python@v5  # versi terbaru
+        with:
+          python-version: '3.12.7'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy scikit-learn
+
+      - name: Run preprocessing pipeline
+        run: |
+          cd preprocessing
+          python automate_ItSam77.py
+
+      - name: Upload processed data
+        uses: actions/upload-artifact@v4
+        with:
+          name: processed-data
+          path: |
+            preprocessing/processed_data.csv
+            preprocessing/preprocessing.log

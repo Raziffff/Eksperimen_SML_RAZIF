@@ -26,7 +26,7 @@ Eksperimen_SML_RAZIF/
         ├── y_train.csv
         └── y_test.csv
 
-📚 Informasi Dataset
+## 📚 Informasi Dataset
 Nama dataset : Drug Classification (drug200.csv)
 
 Sumber : Dataset latihan dari kelas MSML (asalnya dari Kaggle – Pratham Tripathi)
@@ -49,7 +49,7 @@ Target: Drug – jenis obat (DrugY, drugX, drugA, drugB, drugC)
 
 Dataset sedikit imbalanced (kelas DrugY lebih dominan), sehingga perlu perhatian saat split dan saat nanti membangun model.
 
-🔬 Ringkasan Eksperimen
+## 🔬 Ringkasan Eksperimen
 Data Loading
 
 Load drug200.csv dengan pandas.
@@ -90,7 +90,7 @@ Menyimpan hasil preprocessing ke file:
 
 drug200_processed.csv, X_train.csv, X_test.csv, y_train.csv, y_test.csv.
 
-🛠️ Tools & Library
+## 🛠️ Tools & Library
 Python 3.12
 
 pandas, numpy – data wrangling
@@ -101,7 +101,7 @@ scikit-learn – preprocessing & train–test split
 
 Jupyter Notebook / Google Colab untuk eksperimen
 
-🚀 Cara Menjalankan
+## 🚀 Cara Menjalankan
 Clone repo
 
 bash
@@ -131,7 +131,7 @@ Jalankan sel dari atas ke bawah.
 
 File hasil preprocessing (X_train.csv, dll.) akan tersimpan di folder drug_preprocessing/.
 
-👤 Author
+## 👤 Author
 Nama : Muhamad Razif
 
 Kelas : Machine Learning System and MLOps – Dicoding
